@@ -1,8 +1,7 @@
 const fs=require('fs');
-data='Hello there';
-fs.readFile('./data.txt',data,(err,data)=>{
+const data=fs.readFile('./data.txt','utf8',(err,data)=>{
     if(err){
-        console.log("Error writing the file",err);
+        console.log("Error reading the file",err);
         return;
     }
     console.log(data);
