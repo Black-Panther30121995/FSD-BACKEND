@@ -1,0 +1,38 @@
+[
+  {
+    "rollno": 1,
+    "name": "War",
+    "course": "B.Tech",
+    "section": "A"
+  },
+  {
+    "rollno": 2,
+    "name": "Yin",
+    "course": "B.Tech",
+    "section": "A"
+  },
+  {
+    "rollno": 3,
+    "name": "Forth",
+    "course": "B.Pharma",
+    "section": "A"
+  },
+  {
+    "rollno": 4,
+    "name": "Gemini",
+    "course": "B.Pharma",
+    "section": "A"
+  },
+  {
+    "rollno": 5,
+    "name": "First",
+    "course": "B.Tech",
+    "section": "A"
+  },
+  {
+    "rollno": 6,
+    "name": "Sand",
+    "course": "B.Sc.",
+    "section": "A"
+  }
+]
