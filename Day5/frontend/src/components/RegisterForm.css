@@ -1,0 +1,72 @@
+.register-container {
+    min-height: auto;
+    padding: 20px 20px 20px 20px; /* Consistent padding on all sides */
+    margin-top: 0; /* Remove any top margin */
+  }
+  
+  .register-title {
+    color: #A55B4B;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 0; /* Ensure no extra top margin */
+  }
+  
+  .register-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.2);
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .form-label {
+    color: #A55B4B;
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  .register-input {
+    border-color: #A55B4B;
+    width: 200px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .register-button {
+    background-color: #A55B4B;
+    border-color: #A55B4B;
+    color: white;
+    width: 200px;
+  }
+  
+  .message {
+    font-weight: bold;
+  }
+  
+  .message.success {
+    color: #A55B4B;
+  }
+  
+  .message.error {
+    color: #dc3545;
+  }
+  
+  /* Optional: Add hover effect for the button */
+  .register-button:hover {
+    background-color: #DCA06D;
+    border-color: #DCA06D;
+  }

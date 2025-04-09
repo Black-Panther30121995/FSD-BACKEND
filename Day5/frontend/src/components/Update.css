@@ -1,0 +1,63 @@
+.update-container {
+    min-height: auto;
+    padding: 20px 20px 20px 20px;
+    margin-top: 0;
+  }
+  
+  .update-title {
+    color: #A55B4B;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .update-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .input-label {
+    color: #A55B4B;
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  .update-input {
+    border-color: #A55B4B;
+    width: 200px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #A55B4B;
+  }
+  
+  .update-button {
+    background-color: #A55B4B;
+    border-color: #A55B4B;
+    color: white;
+    width: 200px;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Optional: Add hover effect for the button */
+  .update-button:hover {
+    background-color: #DCA06D;
+  }

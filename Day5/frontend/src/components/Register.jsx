@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './RegisterForm.css'; // Import the CSS file
 
-const RegisterForm = () => {
+const Register = () => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [message, setMessage] = useState('');
@@ -15,129 +16,43 @@ const RegisterForm = () => {
   };
 
   return (
-    <div
-      className="container my-3"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        minHeight: "100vh",
-        backgroundColor: "#f0e6f0"
-      }}
-    >
-      <h2
-        className="text-center mb-4"
-        style={{ color: "#6a0dad" }}
-      >
+    <div className="register-container my-3">
+      <h2 className="register-title text-center mb-4">
         User Registration
       </h2>
-      <form
-        onSubmit={handleRegister}
-        className="d-flex flex-column align-items-center"
-        style={{
-          width: "100%",
-          maxWidth: "400px",
-          padding: "30px",
-          backgroundColor: "#fff",
-          borderRadius: "8px",
-          boxShadow: "0 0 10px rgba(106, 13, 173, 0.2)"
-        }}
-      >
-        <div
-          className="w-100"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "10px",
-            marginBottom: "30px"
-          }}
-        >
-          <label
-            className="form-label"
-            style={{
-              color: "#6a0dad",
-              margin: 0,
-              whiteSpace: "nowrap"
-            }}
-          >
+      <form onSubmit={handleRegister} className="register-form d-flex flex-column align-items-center">
+        <div className="input-group w-100">
+          <label className="form-label">
             Name:
           </label>
           <input
             type="text"
-            className="form-control"
+            className="form-control register-input"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            style={{
-              borderColor: "#6a0dad",
-              width: "200px"
-            }}
           />
         </div>
-        <div
-          className="w-100"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "10px",
-            marginBottom: "30px"
-          }}
-        >
-          <label
-            className="form-label"
-            style={{
-              color: "#6a0dad",
-              margin: 0,
-              whiteSpace: "nowrap"
-            }}
-          >
+        <div className="input-group w-100">
+          <label className="form-label">
             Age:
           </label>
           <input
             type="text"
-            className="form-control"
+            className="form-control register-input"
             value={age}
             onChange={(e) => setAge(e.target.value)}
             required
-            style={{
-              borderColor: "#6a0dad",
-              width: "200px"
-            }}
           />
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-            marginTop: "20px"
-          }}
-        >
-          <button
-            type="submit"
-            className="btn"
-            style={{
-              backgroundColor: "#6a0dad",
-              borderColor: "#6a0dad",
-              color: "white",
-              width: "200px"
-            }}
-          >
+        <div className="button-container">
+          <button type="submit" className="btn register-button">
             Register
           </button>
         </div>
       </form>
       {message && (
-        <p
-          className="text-center mt-3"
-          style={{
-            color: message.includes("failed") ? "#dc3545" : "#6a0dad",
-            fontWeight: "bold"
-          }}
-        >
+        <p className={`message text-center mt-3 ${message.includes("failed") ? "error" : "success"}`}>
           {message}
         </p>
       )}
@@ -145,4 +60,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default Register;

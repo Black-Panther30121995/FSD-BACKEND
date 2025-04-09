@@ -1,0 +1,50 @@
+.view-container {
+    min-height: auto;
+    padding: 20px 20px 20px 20px; /* Match Register's padding */
+    margin-top: 0; /* Remove any top margin */
+  }
+  
+  .view-title {
+    color: #A55B4B;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 0; /* Ensure no extra top margin */
+  }
+  
+  .users-table {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .users-table {
+    border: 1px solid #A55B4B;
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.2);
+  }
+  
+  .table-header {
+    border: 3px solid #A55B4B;
+    background-color: #A55B4B;
+    color: white;
+  }
+  
+  .table-header th {
+    padding: 10px;
+  }
+  
+  .table-row {
+    border-bottom: 1px solid #A55B4B;
+  }
+  
+  .table-row td {
+    padding: 10px;
+  }
+  
+  /* Optional: Add hover effect for table rows */
+  .table-row:hover {
+    background-color: #f5f0f5;
+  }
