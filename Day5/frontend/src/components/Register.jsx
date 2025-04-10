@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './RegisterForm.css'; // Import the CSS file
+import './RegisterForm.css';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -9,22 +9,34 @@ const Register = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    console.log('Form submitted with:', { name, age }); // Debug log
+    if (!name.trim() || !age.trim()) {
+      setMessage("Please enter both name and age");
+      return;
+    }
     const user = { name, age };
-
-    await axios.post("https://fsd-backend-5.onrender.com/users", user);
-    alert("User Registered successfully!!")
+    try {
+      await axios.post("https://fsd-backend-5.onrender.com/users", user);
+      alert("User Registered successfully!!");
+      setName('');
+      setAge('');
+      setMessage("Registration successful");
+    } catch (error) {
+      setMessage("Registration failed");
+      console.error(error);
+    }
   };
 
   return (
-    <div className="register-container my-3">
-      <h2 className="register-title text-center mb-4">
-        User Registration
-      </h2>
-      <form onSubmit={handleRegister} className="register-form d-flex flex-column align-items-center">
+    <div className="register-container">
+      <h2 className="register-title">User Registration</h2>
+      <form
+        onSubmit={handleRegister}
+        className="register-form d-flex flex-column align-items-center"
+        autoComplete="off"
+      >
         <div className="input-group w-100">
-          <label className="form-label">
-            Name:
-          </label>
+          <label className="form-label">Name:</label>
           <input
             type="text"
             className="form-control register-input"
@@ -34,9 +46,7 @@ const Register = () => {
           />
         </div>
         <div className="input-group w-100">
-          <label className="form-label">
-            Age:
-          </label>
+          <label className="form-label">Age:</label>
           <input
             type="text"
             className="form-control register-input"
