@@ -5,6 +5,7 @@ import SearchBook from './components/SearchBook';
 import UpdateBook from './components/UpdateBook';
 import DeleteBook from './components/DeleteBook';
 import ViewBook from './components/ViewBook';
+import Home from'./components/Home'
 import './App.css';
 
 const App = () => {
@@ -20,13 +21,10 @@ const App = () => {
           <Link to="/delete" className="navbar-link">Delete Book</Link>
         </div>
       </nav>
-      <img
-        style={{ display: "block", margin: "20px auto", maxWidth: "100%", height: "auto" }}
-        src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?semt=ais_hybrid&w=740"
-        alt="Books"
-      />
+      
 
       <Routes>
+        <Route path='/' element={<Home/>}></Route>
         <Route path="/search" element={<SearchBook />} />
         <Route path="/view" element={<ViewBook />} />
         <Route path="/add" element={<AddBook />} />
